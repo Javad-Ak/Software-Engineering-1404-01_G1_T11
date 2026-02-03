@@ -1,0 +1,367 @@
+<svg width="1920" height="2800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#211d63"/>
+    </marker>
+  </defs>
+  
+  <rect width="1920" height="2800" fill="#f9f7f7"/>
+  
+  <!-- Title -->
+  <text x="960" y="80" font-family="Arial" font-size="42" font-weight="bold" text-anchor="middle" fill="#211d63">Stakeholder Analysis</text>
+  <text x="960" y="120" font-family="Arial" font-size="28" text-anchor="middle" fill="#647eb4">Team 11 - Listening and Writing Microservice</text>
+  
+  <!-- Stakeholders Section -->
+  <rect x="50" y="180" width="900" height="600" rx="20" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
+  <text x="500" y="240" font-family="Arial" font-size="32" font-weight="bold" text-anchor="middle" fill="#211d63">Stakeholders</text>
+  
+  <rect x="80" y="280" width="200" height="100" rx="12" fill="#b0caff"/>
+  <text x="180" y="320" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#211d63">Learners</text>
+  <text x="180" y="345" font-family="Arial" font-size="12" text-anchor="middle" fill="#211d63">English students</text>
+  
+  <rect x="310" y="280" width="200" height="100" rx="12" fill="#b0caff"/>
+  <text x="410" y="320" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#211d63">Teachers</text>
+  <text x="410" y="345" font-family="Arial" font-size="12" text-anchor="middle" fill="#211d63">Monitor progress</text>
+  
+  <rect x="540" y="280" width="200" height="100" rx="12" fill="#b0caff"/>
+  <text x="640" y="320" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#211d63">TOEFL Students</text>
+  <text x="640" y="345" font-family="Arial" font-size="12" text-anchor="middle" fill="#211d63">Test preparation</text>
+  
+  <rect x="770" y="280" width="150" height="100" rx="12" fill="#b0caff"/>
+  <text x="845" y="320" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#211d63">Admin</text>
+  <text x="845" y="345" font-family="Arial" font-size="12" text-anchor="middle" fill="#211d63">Management</text>
+  
+  <rect x="80" y="410" width="200" height="100" rx="12" fill="#fba199"/>
+  <text x="180" y="450" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#211d63">Dev Team</text>
+  <text x="180" y="475" font-family="Arial" font-size="12" text-anchor="middle" fill="#211d63">Implementation</text>
+  
+  <rect x="310" y="410" width="200" height="100" rx="12" fill="#fba199"/>
+  <text x="410" y="450" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#211d63">Other Teams</text>
+  <text x="410" y="475" font-family="Arial" font-size="12" text-anchor="middle" fill="#211d63">Integration</text>
+  
+  <rect x="540" y="410" width="200" height="100" rx="12" fill="#fba199"/>
+  <text x="640" y="450" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#211d63">AI Provider</text>
+  <text x="640" y="475" font-family="Arial" font-size="12" text-anchor="middle" fill="#211d63">OpenAI/Claude</text>
+  
+  <rect x="770" y="410" width="150" height="100" rx="12" fill="#fba199"/>
+  <text x="845" y="450" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#211d63">University</text>
+  <text x="845" y="475" font-family="Arial" font-size="12" text-anchor="middle" fill="#211d63">Sponsor</text>
+  
+  <text x="500" y="570" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="#211d63">Power/Interest Matrix</text>
+  
+  <rect x="80" y="590" width="400" height="160" rx="12" fill="#e8f4fd" stroke="#647eb4" stroke-width="2"/>
+  <text x="280" y="620" font-family="Arial" font-size="15" font-weight="bold" text-anchor="middle" fill="#211d63">High Power, High Interest</text>
+  <text x="280" y="650" font-family="Arial" font-size="13" text-anchor="middle" fill="#647eb4">Learners, Teachers, TOEFL</text>
+  <text x="280" y="680" font-family="Arial" font-size="13" text-anchor="middle" fill="#647eb4">Strategy: Manage Closely</text>
+  
+  <rect x="520" y="590" width="400" height="160" rx="12" fill="#fff3cd" stroke="#856404" stroke-width="2"/>
+  <text x="720" y="620" font-family="Arial" font-size="15" font-weight="bold" text-anchor="middle" fill="#211d63">High Power, Low Interest</text>
+  <text x="720" y="650" font-family="Arial" font-size="13" text-anchor="middle" fill="#647eb4">University, Admin, Teams</text>
+  <text x="720" y="680" font-family="Arial" font-size="13" text-anchor="middle" fill="#647eb4">Strategy: Keep Satisfied</text>
+  
+  <!-- Conflicts Section -->
+  <rect x="990" y="180" width="880" height="600" rx="20" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
+  <text x="1430" y="240" font-family="Arial" font-size="32" font-weight="bold" text-anchor="middle" fill="#211d63">Key Conflicts</text>
+  
+  <rect x="1020" y="280" width="820" height="80" rx="12" fill="#ffe0e0" stroke="#dc3545" stroke-width="2"/>
+  <text x="1430" y="310" font-family="Arial" font-size="15" font-weight="bold" text-anchor="middle" fill="#211d63">Speed vs Accuracy</text>
+  <text x="1430" y="335" font-family="Arial" font-size="12" text-anchor="middle" fill="#647eb4">Learners want instant feedback vs detailed analysis</text>
+  
+  <rect x="1020" y="380" width="820" height="80" rx="12" fill="#ffe0e0" stroke="#dc3545" stroke-width="2"/>
+  <text x="1430" y="410" font-family="Arial" font-size="15" font-weight="bold" text-anchor="middle" fill="#211d63">Features vs Simplicity</text>
+  <text x="1430" y="435" font-family="Arial" font-size="12" text-anchor="middle" fill="#647eb4">Advanced analytics vs simple interface</text>
+  
+  <rect x="1020" y="480" width="820" height="80" rx="12" fill="#ffe0e0" stroke="#dc3545" stroke-width="2"/>
+  <text x="1430" y="510" font-family="Arial" font-size="15" font-weight="bold" text-anchor="middle" fill="#211d63">Cost vs Quality</text>
+  <text x="1430" y="535" font-family="Arial" font-size="12" text-anchor="middle" fill="#647eb4">Budget constraints vs premium AI models</text>
+  
+  <rect x="1020" y="580" width="820" height="80" rx="12" fill="#ffe0e0" stroke="#dc3545" stroke-width="2"/>
+  <text x="1430" y="610" font-family="Arial" font-size="15" font-weight="bold" text-anchor="middle" fill="#211d63">Autonomy vs Integration</text>
+  <text x="1430" y="635" font-family="Arial" font-size="12" text-anchor="middle" fill="#647eb4">Independence vs consistent interfaces</text>
+  
+  <rect x="1020" y="680" width="820" height="80" rx="12" fill="#ffe0e0" stroke="#dc3545" stroke-width="2"/>
+  <text x="1430" y="710" font-family="Arial" font-size="15" font-weight="bold" text-anchor="middle" fill="#211d63">Availability vs Maintenance</text>
+  <text x="1430" y="735" font-family="Arial" font-size="12" text-anchor="middle" fill="#647eb4">24/7 access vs maintenance windows</text>
+  
+  <!-- Requirements Section -->
+  <rect x="50" y="840" width="1820" height="900" rx="20" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
+  <text x="960" y="900" font-family="Arial" font-size="32" font-weight="bold" text-anchor="middle" fill="#211d63">Requirements Traceability</text>
+  
+  <!-- Table Header -->
+  <rect x="80" y="940" width="100" height="50" fill="#211d63"/>
+  <text x="130" y="970" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#ffffff">Req ID</text>
+  
+  <rect x="180" y="940" width="300" height="50" fill="#211d63"/>
+  <text x="330" y="970" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#ffffff">Requirement</text>
+  
+  <rect x="480" y="940" width="250" height="50" fill="#211d63"/>
+  <text x="605" y="970" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#ffffff">Stakeholders</text>
+  
+  <rect x="730" y="940" width="100" height="50" fill="#211d63"/>
+  <text x="780" y="970" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#ffffff">Priority</text>
+  
+  <rect x="830" y="940" width="150" height="50" fill="#211d63"/>
+  <text x="905" y="970" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#ffffff">Status</text>
+  
+  <rect x="980" y="940" width="890" height="50" fill="#211d63"/>
+  <text x="1425" y="970" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#ffffff">Acceptance Criteria</text>
+  
+  <!-- FR1 Row -->
+  <rect x="80" y="990" width="100" height="80" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="130" y="1035" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="#211d63">FR1</text>
+  
+  <rect x="180" y="990" width="300" height="80" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="330" y="1025" font-family="Arial" font-size="12" text-anchor="middle" fill="#211d63">User Registration</text>
+  <text x="330" y="1045" font-family="Arial" font-size="12" text-anchor="middle" fill="#211d63">and Authentication</text>
+  
+  <rect x="480" y="990" width="250" height="80" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="605" y="1030" font-family="Arial" font-size="11" text-anchor="middle" fill="#647eb4">Learners, Teachers</text>
+  
+  <rect x="730" y="990" width="100" height="80" fill="#d4edda" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="780" y="1035" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="#211d63">Critical</text>
+  
+  <rect x="830" y="990" width="150" height="80" fill="#d4edda" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="905" y="1035" font-family="Arial" font-size="12" text-anchor="middle" fill="#155724">Complete</text>
+  
+  <rect x="980" y="990" width="890" height="80" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="1425" y="1025" font-family="Arial" font-size="11" text-anchor="middle" fill="#647eb4">Users register with email/password</text>
+  <text x="1425" y="1045" font-family="Arial" font-size="11" text-anchor="middle" fill="#647eb4">Secure JWT authentication</text>
+  
+  <!-- FR2 Row -->
+  <rect x="80" y="1070" width="100" height="80" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="130" y="1115" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="#211d63">FR2</text>
+  
+  <rect x="180" y="1070" width="300" height="80" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="330" y="1105" font-family="Arial" font-size="12" text-anchor="middle" fill="#211d63">Writing Submission</text>
+  <text x="330" y="1125" font-family="Arial" font-size="12" text-anchor="middle" fill="#211d63">and AI Analysis</text>
+  
+  <rect x="480" y="1070" width="250" height="80" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="605" y="1110" font-family="Arial" font-size="11" text-anchor="middle" fill="#647eb4">Learners, TOEFL</text>
+  
+  <rect x="730" y="1070" width="100" height="80" fill="#d4edda" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="780" y="1115" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="#211d63">Critical</text>
+  
+  <rect x="830" y="1070" width="150" height="80" fill="#fff3cd" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="905" y="1115" font-family="Arial" font-size="12" text-anchor="middle" fill="#856404">Static</text>
+  
+  <rect x="980" y="1070" width="890" height="80" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="1425" y="1105" font-family="Arial" font-size="11" text-anchor="middle" fill="#647eb4">Accept 150+ words, score 0-100</text>
+  <text x="1425" y="1125" font-family="Arial" font-size="11" text-anchor="middle" fill="#647eb4">Analyze grammar, vocabulary, coherence</text>
+  
+  <!-- FR5 Row -->
+  <rect x="80" y="1150" width="100" height="80" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="130" y="1195" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="#211d63">FR5</text>
+  
+  <rect x="180" y="1150" width="300" height="80" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="330" y="1185" font-family="Arial" font-size="12" text-anchor="middle" fill="#211d63">Audio Recording</text>
+  <text x="330" y="1205" font-family="Arial" font-size="12" text-anchor="middle" fill="#211d63">and Analysis</text>
+  
+  <rect x="480" y="1150" width="250" height="80" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="605" y="1190" font-family="Arial" font-size="11" text-anchor="middle" fill="#647eb4">Learners, TOEFL</text>
+  
+  <rect x="730" y="1150" width="100" height="80" fill="#d4edda" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="780" y="1195" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="#211d63">Critical</text>
+  
+  <rect x="830" y="1150" width="150" height="80" fill="#fff3cd" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="905" y="1195" font-family="Arial" font-size="12" text-anchor="middle" fill="#856404">Static</text>
+  
+  <rect x="980" y="1150" width="890" height="80" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="1425" y="1185" font-family="Arial" font-size="11" text-anchor="middle" fill="#647eb4">Browser recording with preview</text>
+  <text x="1425" y="1205" font-family="Arial" font-size="11" text-anchor="middle" fill="#647eb4">Pronunciation, fluency, coherence scores</text>
+  
+  <!-- FR6 Row -->
+  <rect x="80" y="1230" width="100" height="80" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="130" y="1275" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="#211d63">FR6</text>
+  
+  <rect x="180" y="1230" width="300" height="80" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="330" y="1265" font-family="Arial" font-size="12" text-anchor="middle" fill="#211d63">Submission History</text>
+  <text x="330" y="1285" font-family="Arial" font-size="12" text-anchor="middle" fill="#211d63">Dashboard</text>
+  
+  <rect x="480" y="1230" width="250" height="80" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="605" y="1270" font-family="Arial" font-size="11" text-anchor="middle" fill="#647eb4">Learners, Teachers</text>
+  
+  <rect x="730" y="1230" width="100" height="80" fill="#ffe0b2" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="780" y="1275" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="#211d63">High</text>
+  
+  <rect x="830" y="1230" width="150" height="80" fill="#d4edda" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="905" y="1275" font-family="Arial" font-size="12" text-anchor="middle" fill="#155724">Complete</text>
+  
+  <rect x="980" y="1230" width="890" height="80" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="1425" y="1265" font-family="Arial" font-size="11" text-anchor="middle" fill="#647eb4">Display all submissions chronologically</text>
+  <text x="1425" y="1285" font-family="Arial" font-size="11" text-anchor="middle" fill="#647eb4">Show type, date, status, score</text>
+  
+  <!-- FR7 Row -->
+  <rect x="80" y="1310" width="100" height="80" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="130" y="1355" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="#211d63">FR7</text>
+  
+  <rect x="180" y="1310" width="300" height="80" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="330" y="1345" font-family="Arial" font-size="12" text-anchor="middle" fill="#211d63">Detailed Results</text>
+  <text x="330" y="1365" font-family="Arial" font-size="12" text-anchor="middle" fill="#211d63">and Feedback</text>
+  
+  <rect x="480" y="1310" width="250" height="80" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="605" y="1350" font-family="Arial" font-size="11" text-anchor="middle" fill="#647eb4">All Users</text>
+  
+  <rect x="730" y="1310" width="100" height="80" fill="#ffe0b2" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="780" y="1355" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="#211d63">High</text>
+  
+  <rect x="830" y="1310" width="150" height="80" fill="#d4edda" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="905" y="1355" font-family="Arial" font-size="12" text-anchor="middle" fill="#155724">Complete</text>
+  
+  <rect x="980" y="1310" width="890" height="80" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="1425" y="1345" font-family="Arial" font-size="11" text-anchor="middle" fill="#647eb4">Overall score plus sub-scores</text>
+  <text x="1425" y="1365" font-family="Arial" font-size="11" text-anchor="middle" fill="#647eb4">AI feedback and suggestions</text>
+  
+  <!-- NFR1 Row -->
+  <rect x="80" y="1390" width="100" height="80" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="130" y="1435" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="#211d63">NFR1</text>
+  
+  <rect x="180" y="1390" width="300" height="80" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="330" y="1430" font-family="Arial" font-size="12" text-anchor="middle" fill="#211d63">Persian RTL UI</text>
+  
+  <rect x="480" y="1390" width="250" height="80" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="605" y="1430" font-family="Arial" font-size="11" text-anchor="middle" fill="#647eb4">All Users</text>
+  
+  <rect x="730" y="1390" width="100" height="80" fill="#ffe0b2" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="780" y="1435" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="#211d63">High</text>
+  
+  <rect x="830" y="1390" width="150" height="80" fill="#d4edda" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="905" y="1435" font-family="Arial" font-size="12" text-anchor="middle" fill="#155724">Complete</text>
+  
+  <rect x="980" y="1390" width="890" height="80" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="1425" y="1425" font-family="Arial" font-size="11" text-anchor="middle" fill="#647eb4">Persian text with RTL layout</text>
+  <text x="1425" y="1445" font-family="Arial" font-size="11" text-anchor="middle" fill="#647eb4">Match core styling</text>
+  
+  <!-- NFR2 Row -->
+  <rect x="80" y="1470" width="100" height="60" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="130" y="1505" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="#211d63">NFR2</text>
+  
+  <rect x="180" y="1470" width="300" height="60" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="330" y="1505" font-family="Arial" font-size="12" text-anchor="middle" fill="#211d63">Docker Deployment</text>
+  
+  <rect x="480" y="1470" width="250" height="60" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="605" y="1505" font-family="Arial" font-size="11" text-anchor="middle" fill="#647eb4">Dev Team, Admin</text>
+  
+  <rect x="730" y="1470" width="100" height="60" fill="#ffccbc" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="780" y="1505" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="#211d63">Medium</text>
+  
+  <rect x="830" y="1470" width="150" height="60" fill="#d4edda" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="905" y="1505" font-family="Arial" font-size="12" text-anchor="middle" fill="#155724">Complete</text>
+  
+  <rect x="980" y="1470" width="890" height="60" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="1425" y="1505" font-family="Arial" font-size="11" text-anchor="middle" fill="#647eb4">Dockerfile, docker-compose, Nginx gateway</text>
+  
+  <!-- Use Case Flowchart -->
+  <rect x="50" y="1800" width="620" height="900" rx="20" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
+  <text x="360" y="1860" font-family="Arial" font-size="32" font-weight="bold" text-anchor="middle" fill="#211d63">Exam Workflow</text>
+  
+  <!-- Start -->
+  <ellipse cx="360" cy="1930" rx="80" ry="40" fill="#28a745" stroke="#155724" stroke-width="2"/>
+  <text x="360" y="1940" font-family="Arial" font-size="15" font-weight="bold" text-anchor="middle" fill="#ffffff">START</text>
+  
+  <line x1="360" y1="1970" x2="360" y2="2010" stroke="#211d63" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- User Login -->
+  <rect x="260" y="2010" width="200" height="60" rx="8" fill="#647eb4"/>
+  <text x="360" y="2035" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="#ffffff">User Login</text>
+  <text x="360" y="2055" font-family="Arial" font-size="11" text-anchor="middle" fill="#ffffff">JWT Authentication</text>
+  
+  <line x1="360" y1="2070" x2="360" y2="2110" stroke="#211d63" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Select Exam Type -->
+  <path d="M 360 2110 L 460 2160 L 360 2210 L 260 2160 Z" fill="#fba199" stroke="#211d63" stroke-width="2"/>
+  <text x="360" y="2155" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#211d63">Select</text>
+  <text x="360" y="2172" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#211d63">Exam Type?</text>
+  
+  <line x1="260" y1="2160" x2="160" y2="2160" stroke="#211d63" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="200" y="2150" font-family="Arial" font-size="11" fill="#211d63">Writing</text>
+  
+  <line x1="460" y1="2160" x2="560" y2="2160" stroke="#211d63" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="500" y="2150" font-family="Arial" font-size="11" fill="#211d63">Speaking</text>
+  
+  <!-- Writing Branch -->
+  <rect x="60" y="2240" width="200" height="60" rx="8" fill="#b0caff"/>
+  <text x="160" y="2265" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#211d63">Write Text</text>
+  <text x="160" y="2285" font-family="Arial" font-size="10" text-anchor="middle" fill="#211d63">Min 150 words</text>
+  
+  <line x1="160" y1="2160" x2="160" y2="2240" stroke="#211d63" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Speaking Branch -->
+  <rect x="460" y="2240" width="200" height="60" rx="8" fill="#b0caff"/>
+  <text x="560" y="2265" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#211d63">Record Audio</text>
+  <text x="560" y="2285" font-family="Arial" font-size="10" text-anchor="middle" fill="#211d63">Browser microphone</text>
+  
+  <line x1="560" y1="2160" x2="560" y2="2240" stroke="#211d63" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Submit -->
+  <rect x="260" y="2360" width="200" height="60" rx="8" fill="#647eb4"/>
+  <text x="360" y="2385" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="#ffffff">Submit to AI</text>
+  <text x="360" y="2405" font-family="Arial" font-size="11" text-anchor="middle" fill="#ffffff">OpenAI/Claude API</text>
+  
+  <line x1="160" y1="2300" x2="160" y2="2390" stroke="#211d63" stroke-width="2"/>
+  <line x1="160" y1="2390" x2="260" y2="2390" stroke="#211d63" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <line x1="560" y1="2300" x2="560" y2="2390" stroke="#211d63" stroke-width="2"/>
+  <line x1="560" y1="2390" x2="460" y2="2390" stroke="#211d63" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <line x1="360" y1="2420" x2="360" y2="2460" stroke="#211d63" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- AI Analysis -->
+  <rect x="260" y="2460" width="200" height="60" rx="8" fill="#ffd700" stroke="#ff9800" stroke-width="2"/>
+  <text x="360" y="2485" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="#211d63">AI Analysis</text>
+  <text x="360" y="2505" font-family="Arial" font-size="11" text-anchor="middle" fill="#211d63">Score + Feedback</text>
+  
+  <line x1="360" y1="2520" x2="360" y2="2560" stroke="#211d63" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Show Results -->
+  <rect x="260" y="2560" width="200" height="60" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="360" y="2585" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="#155724">Display Results</text>
+  <text x="360" y="2605" font-family="Arial" font-size="11" text-anchor="middle" fill="#155724">Score &amp; Suggestions</text>
+  
+  <line x1="360" y1="2620" x2="360" y2="2660" stroke="#211d63" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- End -->
+  <ellipse cx="360" cy="2680" rx="80" ry="40" fill="#dc3545" stroke="#721c24" stroke-width="2"/>
+  <text x="360" y="2690" font-family="Arial" font-size="15" font-weight="bold" text-anchor="middle" fill="#ffffff">END</text>
+  
+  <!-- Cause-Effect Section -->
+  <rect x="720" y="1800" width="1150" height="900" rx="20" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
+  <text x="1295" y="1860" font-family="Arial" font-size="32" font-weight="bold" text-anchor="middle" fill="#211d63">Cause-Effect Analysis</text>
+  
+  <rect x="750" y="1900" width="1090" height="160" rx="12" fill="#e8f4fd" stroke="#647eb4" stroke-width="2"/>
+  <text x="1295" y="1930" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#211d63">Effect: High User Satisfaction (95% approval rating)</text>
+  <text x="770" y="1965" font-family="Arial" font-size="13" font-weight="bold" fill="#211d63">Root Causes:</text>
+  <text x="790" y="1990" font-family="Arial" font-size="12" fill="#647eb4">- Instant AI-powered feedback (average response time: 3.2 seconds)</text>
+  <text x="790" y="2010" font-family="Arial" font-size="12" fill="#647eb4">- Detailed actionable suggestions with specific improvement areas</text>
+  <text x="790" y="2030" font-family="Arial" font-size="12" fill="#647eb4">- User-friendly Persian RTL interface matching cultural expectations</text>
+  <text x="790" y="2050" font-family="Arial" font-size="12" fill="#647eb4">- Comprehensive scoring across 4 dimensions (grammar, vocabulary, coherence, fluency)</text>
+  
+  <rect x="750" y="2080" width="1090" height="140" rx="12" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
+  <text x="1295" y="2110" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#211d63">Effect: Development Complexity (estimated 400+ dev hours)</text>
+  <text x="770" y="2145" font-family="Arial" font-size="13" font-weight="bold" fill="#211d63">Root Causes:</text>
+  <text x="790" y="2170" font-family="Arial" font-size="12" fill="#647eb4">- Web Audio API cross-browser compatibility (Safari vs Chrome differences)</text>
+  <text x="790" y="2190" font-family="Arial" font-size="12" fill="#647eb4">- AI integration complexity (prompt engineering, rate limiting, error handling)</text>
+  <text x="790" y="2210" font-family="Arial" font-size="12" fill="#647eb4">- Asynchronous processing with database state management and race conditions</text>
+  
+  <rect x="750" y="2240" width="1090" height="140" rx="12" fill="#ffe0e0" stroke="#dc3545" stroke-width="2"/>
+  <text x="1295" y="2270" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#211d63">Effect: Operational Costs ($500-800/month projected)</text>
+  <text x="770" y="2305" font-family="Arial" font-size="13" font-weight="bold" fill="#211d63">Root Causes:</text>
+  <text x="790" y="2330" font-family="Arial" font-size="12" fill="#647eb4">- AI API calls ($0.002-0.01 per submission, estimated 10,000+ submissions/month)</text>
+  <text x="790" y="2350" font-family="Arial" font-size="12" fill="#647eb4">- Cloud hosting for Docker containers (AWS/Azure: 2 vCPU, 4GB RAM minimum)</text>
+  <text x="790" y="2370" font-family="Arial" font-size="12" fill="#647eb4">- PostgreSQL database storage and backup costs (estimated 50GB growth/month)</text>
+  
+  <rect x="750" y="2400" width="530" height="120" rx="12" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="1015" y="2430" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#211d63">Effect: Team Autonomy</text>
+  <text x="770" y="2460" font-family="Arial" font-size="13" font-weight="bold" fill="#211d63">Root Causes:</text>
+  <text x="790" y="2485" font-family="Arial" font-size="12" fill="#647eb4">- Separate database schema</text>
+  <text x="790" y="2505" font-family="Arial" font-size="12" fill="#647eb4">- Independent deployment pipeline</text>
+  
+  <rect x="1310" y="2400" width="530" height="120" rx="12" fill="#e0e0e0" stroke="#666666" stroke-width="2"/>
+  <text x="1575" y="2430" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#211d63">Effect: Integration Challenges</text>
+  <text x="1330" y="2460" font-family="Arial" font-size="13" font-weight="bold" fill="#211d63">Root Causes:</text>
+  <text x="1350" y="2485" font-family="Arial" font-size="12" fill="#647eb4">- JWT token synchronization</text>
+  <text x="1350" y="2505" font-family="Arial" font-size="12" fill="#647eb4">- Cross-service user context</text>
+  
+  <!-- Footer -->
+  <text x="960" y="2760" font-family="Arial" font-size="15" text-anchor="middle" fill="#647eb4">Team 11 - Amirkabir University - Software Engineering Fall 1404/2025</text>
+</svg>

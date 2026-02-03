@@ -1,0 +1,66 @@
+<svg width="1440" height="1024" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1440" height="1024" fill="#f9f7f7"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="1440" height="120" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
+  
+  <!-- Left: Microservices button -->
+  <rect x="100" y="36" width="240" height="48" rx="24" fill="#647eb4"/>
+  <text x="220" y="66" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#ffffff">Microservices Portal</text>
+  
+  <!-- Right: Settings icon -->
+  <circle cx="1040" cy="60" r="22" fill="#b0caff"/>
+  <circle cx="1040" cy="60" r="3" fill="#647eb4"/>
+  <circle cx="1040" cy="50" r="2" fill="#647eb4"/>
+  <circle cx="1040" cy="70" r="2" fill="#647eb4"/>
+  <circle cx="1050" cy="55" r="2" fill="#647eb4"/>
+  <circle cx="1050" cy="65" r="2" fill="#647eb4"/>
+  <circle cx="1030" cy="55" r="2" fill="#647eb4"/>
+  <circle cx="1030" cy="65" r="2" fill="#647eb4"/>
+  
+  <!-- Right: Flag -->
+  <rect x="1090" y="46" width="50" height="28" rx="3" fill="#dddddd" stroke="#999999" stroke-width="1"/>
+  <rect x="1090" y="46" width="50" height="9.33" fill="#239F40"/>
+  <rect x="1090" y="55.33" width="50" height="9.33" fill="#ffffff"/>
+  <rect x="1090" y="64.66" width="50" height="9.34" fill="#DA0000"/>
+  
+  <!-- Right: Logout button -->
+  <rect x="1160" y="40" width="100" height="40" rx="20" fill="#fba199"/>
+  <text x="1210" y="66" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#ffffff">خروج</text>
+  
+  <!-- Right: User avatar -->
+  <circle cx="1300" cy="60" r="32" fill="#b0caff" stroke="#647eb4" stroke-width="2"/>
+  <text x="1300" y="68" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#211d63">JA</text>
+  
+  <!-- Hero Section -->
+  <rect x="100" y="160" width="1240" height="340" rx="20" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
+  
+  <text x="720" y="250" font-family="Arial" font-size="48" font-weight="bold" text-anchor="middle" fill="#211d63">Listening &amp; Writing Microservice</text>
+  <text x="720" y="310" font-family="Arial" font-size="24" text-anchor="middle" fill="#647eb4">Practice your writing and speaking skills</text>
+  
+  <rect x="520" y="360" width="180" height="56" rx="28" fill="#647eb4"/>
+  <text x="610" y="394" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#ffffff">Start Exam</text>
+  
+  <rect x="740" y="360" width="180" height="56" rx="28" fill="#fba199"/>
+  <text x="830" y="394" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#ffffff">Dashboard</text>
+  
+  <!-- Feature Cards -->
+  <text x="720" y="580" font-family="Arial" font-size="36" font-weight="bold" text-anchor="middle" fill="#211d63">Features</text>
+  
+  <rect x="100" y="640" width="380" height="280" rx="20" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
+  <text x="290" y="720" font-family="Arial" font-size="48" text-anchor="middle">📝</text>
+  <text x="290" y="790" font-family="Arial" font-size="28" font-weight="bold" text-anchor="middle" fill="#211d63">Writing Test</text>
+  <text x="290" y="840" font-family="Arial" font-size="18" text-anchor="middle" fill="#647eb4">Write and get scored</text>
+  
+  <rect x="530" y="640" width="380" height="280" rx="20" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
+  <text x="720" y="720" font-family="Arial" font-size="48" text-anchor="middle">🎤</text>
+  <text x="720" y="790" font-family="Arial" font-size="28" font-weight="bold" text-anchor="middle" fill="#211d63">Speaking Test</text>
+  <text x="720" y="840" font-family="Arial" font-size="18" text-anchor="middle" fill="#647eb4">Record and get feedback</text>
+  
+  <rect x="960" y="640" width="380" height="280" rx="20" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
+  <text x="1150" y="720" font-family="Arial" font-size="48" text-anchor="middle">📊</text>
+  <text x="1150" y="790" font-family="Arial" font-size="28" font-weight="bold" text-anchor="middle" fill="#211d63">History</text>
+  <text x="1150" y="840" font-family="Arial" font-size="18" text-anchor="middle" fill="#647eb4">Track your progress</text>
+  
+  <text x="720" y="990" font-family="Arial" font-size="15" text-anchor="middle" fill="#647eb4">Team 11 - Software Engineering 1404</text>
+</svg>

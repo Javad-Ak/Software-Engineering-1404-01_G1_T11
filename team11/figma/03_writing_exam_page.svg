@@ -1,0 +1,84 @@
+<svg width="1440" height="1200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1440" height="1200" fill="#f9f7f7"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="1440" height="120" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
+  
+  <!-- Left: Back button -->
+  <circle cx="120" cy="60" r="24" fill="#b0caff"/>
+  <path d="M 128 60 L 116 54 L 116 66 Z" fill="#211d63"/>
+  <text x="160" y="66" font-family="Arial" font-size="18" font-weight="bold" fill="#211d63">بازگشت</text>
+  
+  <!-- Center: Title -->
+  <text x="720" y="66" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="#211d63">آزمون نوشتاری</text>
+  
+  <!-- Right: Settings icon -->
+  <circle cx="1040" cy="60" r="22" fill="#b0caff"/>
+  <circle cx="1040" cy="60" r="3" fill="#647eb4"/>
+  <circle cx="1040" cy="50" r="2" fill="#647eb4"/>
+  <circle cx="1040" cy="70" r="2" fill="#647eb4"/>
+  <circle cx="1050" cy="55" r="2" fill="#647eb4"/>
+  <circle cx="1050" cy="65" r="2" fill="#647eb4"/>
+  <circle cx="1030" cy="55" r="2" fill="#647eb4"/>
+  <circle cx="1030" cy="65" r="2" fill="#647eb4"/>
+  
+  <!-- Right: Flag -->
+  <rect x="1090" y="46" width="50" height="28" rx="3" fill="#dddddd" stroke="#999999" stroke-width="1"/>
+  <rect x="1090" y="46" width="50" height="9.33" fill="#239F40"/>
+  <rect x="1090" y="55.33" width="50" height="9.33" fill="#ffffff"/>
+  <rect x="1090" y="64.66" width="50" height="9.34" fill="#DA0000"/>
+  
+  <!-- Right: Logout button -->
+  <rect x="1160" y="40" width="100" height="40" rx="20" fill="#fba199"/>
+  <text x="1210" y="66" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#ffffff">خروج</text>
+  
+  <!-- Right: User avatar -->
+  <circle cx="1300" cy="60" r="32" fill="#b0caff" stroke="#647eb4" stroke-width="2"/>
+  <text x="1300" y="68" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#211d63">JA</text>
+  
+  <!-- Title -->
+  <text x="720" y="180" font-family="Arial" font-size="40" font-weight="bold" text-anchor="middle" fill="#211d63">Writing Exam</text>
+  
+  <!-- Exam Container -->
+  <rect x="200" y="240" width="1040" height="860" rx="20" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
+  
+  <!-- Topic Box -->
+  <rect x="240" y="280" width="960" height="100" rx="15" fill="#f9f7f7"/>
+  <text x="720" y="320" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#211d63">Topic:</text>
+  <text x="720" y="355" font-family="Arial" font-size="16" text-anchor="middle" fill="#647eb4">Describe your favorite holiday destination</text>
+  
+  <!-- Label -->
+  <text x="720" y="440" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#211d63">Write your text (minimum 150 words):</text>
+  
+  <!-- Text Area -->
+  <rect x="240" y="470" width="960" height="440" rx="15" fill="#ffffff" stroke="#b0caff" stroke-width="2"/>
+  <text x="260" y="500" font-family="Arial" font-size="14" fill="#999999">Type your text here...</text>
+  
+  <line x1="260" y1="530" x2="1180" y2="530" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="260" y1="565" x2="1180" y2="565" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="260" y1="600" x2="1180" y2="600" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="260" y1="635" x2="1180" y2="635" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="260" y1="670" x2="1180" y2="670" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="260" y1="705" x2="1180" y2="705" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="260" y1="740" x2="1180" y2="740" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="260" y1="775" x2="1180" y2="775" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="260" y1="810" x2="1180" y2="810" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="260" y1="845" x2="1180" y2="845" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="260" y1="880" x2="1180" y2="880" stroke="#e0e0e0" stroke-width="1"/>
+  
+  <!-- Word Counter -->
+  <text x="260" y="950" font-family="Arial" font-size="15" fill="#647eb4">Word count: 0</text>
+  
+  <!-- Buttons -->
+  <rect x="540" y="1000" width="240" height="56" rx="28" fill="#647eb4"/>
+  <text x="660" y="1034" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#ffffff">Submit</text>
+  
+  <rect x="820" y="1000" width="160" height="56" rx="28" fill="#fba199"/>
+  <text x="900" y="1034" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#ffffff">Clear</text>
+  
+  <!-- Success Message -->
+  <g opacity="0.3">
+    <rect x="420" y="1080" width="600" height="90" rx="15" fill="#d4edda" stroke="#155724" stroke-width="2"/>
+    <text x="720" y="1120" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="#155724">Success! Score: 90</text>
+  </g>
+</svg>
