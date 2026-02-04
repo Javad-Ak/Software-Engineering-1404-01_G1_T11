@@ -41,11 +41,18 @@
     <main style="padding: 40px 20px; max-width: 900px; margin: 0 auto;">
       <h1 style="text-align: center; color: var(--navy); margin-bottom: 30px;">آزمون نوشتن</h1>
 
+      {% if not question %}
+      <div style="background: #f8d7da; color: #721c24; padding: 30px; border-radius: 15px; text-align: center;">
+        <h2>خطا</h2>
+        <p>هیچ سوالی برای این دسته‌بندی وجود ندارد. لطفاً به صفحه انتخاب آزمون بازگردید.</p>
+        <a href="{% url 'team11_start_exam' %}" class="btn btn-primary" style="margin-top: 20px; display: inline-block; text-decoration: none;">بازگشت</a>
+      </div>
+      {% else %}
       <div class="exam-container" style="background: white; padding: 40px; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
         
         <div class="topic-display" style="background: var(--bg-cream); padding: 20px; border-radius: 10px; margin-bottom: 30px;">
           <h3 style="color: var(--navy); margin-bottom: 10px;">موضوع:</h3>
-          <p style="color: var(--dark-blue); font-size: 1.1rem;">{{ topic }}</p>
+          <p style="color: var(--dark-blue); font-size: 1.1rem;">{{ question.question_text }}</p>
         </div>
 
         <form id="writingForm">
@@ -74,6 +81,7 @@
 
         <div id="resultMessage" style="display: none; margin-top: 30px; padding: 20px; border-radius: 10px; text-align: center;"></div>
       </div>
+      {% endif %}
     </main>
   </div>
 
@@ -142,7 +150,8 @@
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
-            topic: '{{ topic }}',
+            question_id: '{{ question.question_id }}',
+            topic: '{{ question.question_text|escapejs }}',
             text_body: text
           })
         });

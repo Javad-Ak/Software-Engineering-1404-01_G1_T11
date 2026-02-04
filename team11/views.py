@@ -35,10 +35,12 @@ def dashboard(request):
     """Dashboard showing user's submission history"""
     user_id = request.user.id
     
-    # Get all submissions for the user
-    submissions = Submission.objects.filter(user_id=user_id).select_related(
-        'assessment_result'
-    ).prefetch_related('writing_details', 'listening_details')
+    # Get all submissions for the user with related data
+    submissions = Submission.objects.using('team11').filter(user_id=user_id).select_related(
+        'assessment_result',
+        'writing_details',
+        'listening_details'
+    ).order_by('-created_at')
     
     context = {
         'submissions': submissions,
@@ -49,12 +51,12 @@ def dashboard(request):
 @api_login_required
 def start_exam(request):
     """Page to select exam type and category"""
-    writing_categories = QuestionCategory.objects.filter(
+    writing_categories = QuestionCategory.objects.using('team11').filter(
         question_type=SubmissionType.WRITING,
         is_active=True
     ).prefetch_related('questions')
     
-    listening_categories = QuestionCategory.objects.filter(
+    listening_categories = QuestionCategory.objects.using('team11').filter(
         question_type=SubmissionType.LISTENING,
         is_active=True
     ).prefetch_related('questions')
@@ -72,21 +74,22 @@ def writing_exam(request):
     category_id = request.GET.get('category')
     
     if category_id:
-        questions = Question.objects.filter(
+        questions = Question.objects.using('team11').filter(
             category_id=category_id,
             category__question_type=SubmissionType.WRITING,
             is_active=True
         )
-        question = random.choice(questions) if questions.exists() else None
     else:
-        questions = Question.objects.filter(
+        questions = Question.objects.using('team11').filter(
             category__question_type=SubmissionType.WRITING,
             is_active=True
         )
-        question = random.choice(questions) if questions.exists() else None
+    
+    question = random.choice(list(questions)) if questions.exists() else None
     
     context = {
         'question': question,
+        'has_question': question is not None,
     }
     return render(request, f"{TEAM_NAME}/writing_exam.html", context)
 
@@ -97,21 +100,22 @@ def listening_exam(request):
     category_id = request.GET.get('category')
     
     if category_id:
-        questions = Question.objects.filter(
+        questions = Question.objects.using('team11').filter(
             category_id=category_id,
             category__question_type=SubmissionType.LISTENING,
             is_active=True
         )
-        question = random.choice(questions) if questions.exists() else None
     else:
-        questions = Question.objects.filter(
+        questions = Question.objects.using('team11').filter(
             category__question_type=SubmissionType.LISTENING,
             is_active=True
         )
-        question = random.choice(questions) if questions.exists() else None
+    
+    question = random.choice(list(questions)) if questions.exists() else None
     
     context = {
         'question': question,
+        'has_question': question is not None,
     }
     return render(request, f"{TEAM_NAME}/listening_exam.html", context)
 
@@ -136,19 +140,19 @@ def submit_writing(request):
         question = None
         if question_id:
             try:
-                question = Question.objects.get(question_id=question_id)
+                question = Question.objects.using('team11').get(question_id=question_id)
             except Question.DoesNotExist:
                 pass
         
         # Create submission with pending status
-        submission = Submission.objects.create(
+        submission = Submission.objects.using('team11').create(
             user_id=request.user.id,
             submission_type=SubmissionType.WRITING,
             status=AnalysisStatus.IN_PROGRESS
         )
         
         # Create writing details
-        WritingSubmission.objects.create(
+        WritingSubmission.objects.using('team11').create(
             submission=submission,
             question=question,
             topic=topic,
@@ -168,7 +172,7 @@ def submit_writing(request):
             submission.save()
             
             # Create assessment result
-            AssessmentResult.objects.create(
+            AssessmentResult.objects.using('team11').create(
                 submission=submission,
                 grammar_score=assessment_result['grammar_score'],
                 vocabulary_score=assessment_result['vocabulary_score'],
@@ -224,19 +228,19 @@ def submit_listening(request):
         question = None
         if question_id:
             try:
-                question = Question.objects.get(question_id=question_id)
+                question = Question.objects.using('team11').get(question_id=question_id)
             except Question.DoesNotExist:
                 pass
         
         # Create submission with pending status
-        submission = Submission.objects.create(
+        submission = Submission.objects.using('team11').create(
             user_id=request.user.id,
             submission_type=SubmissionType.LISTENING,
             status=AnalysisStatus.IN_PROGRESS
         )
         
         # Create listening details (without transcription initially)
-        listening_detail = ListeningSubmission.objects.create(
+        listening_detail = ListeningSubmission.objects.using('team11').create(
             submission=submission,
             question=question,
             topic=topic,
@@ -276,7 +280,7 @@ def submit_listening(request):
             submission.save()
             
             # Create assessment result
-            AssessmentResult.objects.create(
+            AssessmentResult.objects.using('team11').create(
                 submission=submission,
                 pronunciation_score=assessment_result['pronunciation_score'],
                 fluency_score=assessment_result['fluency_score'],
@@ -319,21 +323,27 @@ def submit_listening(request):
 def submission_detail(request, submission_id):
     """View detailed results for a specific submission"""
     submission = get_object_or_404(
-        Submission.objects.select_related('assessment_result'),
+        Submission.objects.using('team11').select_related('assessment_result'),
         submission_id=submission_id,
         user_id=request.user.id
     )
     
-    # Get type-specific details
+    # Get type-specific details using select_related (OneToOne relationship)
     details = None
     if submission.submission_type == SubmissionType.WRITING:
-        details = WritingSubmission.objects.filter(submission=submission).first()
+        try:
+            details = submission.writing_details
+        except WritingSubmission.DoesNotExist:
+            details = None
     else:
-        details = ListeningSubmission.objects.filter(submission=submission).first()
+        try:
+            details = submission.listening_details
+        except ListeningSubmission.DoesNotExist:
+            details = None
     
     context = {
         'submission': submission,
         'details': details,
-        'result': submission.assessment_result,
+        'result': submission.assessment_result if hasattr(submission, 'assessment_result') else None,
     }
     return render(request, f"{TEAM_NAME}/submission_detail.html", context)

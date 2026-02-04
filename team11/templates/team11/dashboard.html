@@ -61,9 +61,17 @@
               
               <div style="color: var(--dark-blue); margin-bottom: 5px;">
                 {% if submission.submission_type == 'writing' %}
-                  موضوع: {{ submission.writing_details.topic|truncatewords:10 }}
+                  {% if submission.writing_details.question %}
+                    موضوع: {{ submission.writing_details.question.question_text|truncatewords:10 }}
+                  {% else %}
+                    موضوع: {{ submission.writing_details.topic|default:"نامشخص"|truncatewords:10 }}
+                  {% endif %}
                 {% else %}
-                  موضوع: {{ submission.listening_details.topic|truncatewords:10 }}
+                  {% if submission.listening_details.question %}
+                    موضوع: {{ submission.listening_details.question.question_text|truncatewords:10 }}
+                  {% else %}
+                    موضوع: {{ submission.listening_details.topic|default:"نامشخص"|truncatewords:10 }}
+                  {% endif %}
                 {% endif %}
               </div>
               

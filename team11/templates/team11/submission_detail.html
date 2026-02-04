@@ -62,7 +62,13 @@
         <div style="display: grid; gap: 15px;">
           <div style="display: grid; grid-template-columns: 150px 1fr; gap: 10px;">
             <strong style="color: var(--dark-blue);">موضوع:</strong>
-            <span style="color: var(--navy);">{{ details.topic }}</span>
+            <span style="color: var(--navy);">
+              {% if details.question %}
+                {{ details.question.question_text }}
+              {% else %}
+                {{ details.topic|default:"نامشخص" }}
+              {% endif %}
+            </span>
           </div>
           
           {% if submission.submission_type == 'writing' %}
