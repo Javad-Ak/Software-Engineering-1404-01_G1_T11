@@ -2,187 +2,168 @@
 
 ## Overview
 
-This microservice provides listening (speaking) and writing assessment functionality for the English learning platform. Users can submit writing texts or audio recordings, receive instant scores (currently static at 90), and view their submission history.
+This microservice provides AI-powered listening (speaking) and writing assessment for TOEFL-style English exams. Users submit writing texts or audio recordings and receive detailed AI-generated scores and feedback.
 
 [View Figma Design](https://www.figma.com/design/3uaZuwIjT0OU8v7w2cy7Df/SE1_T11?node-id=0-1&m=dev&t=wTZc2qAKki3quDGV-1)
 
+## Features
 
-## Features Implemented (Step 1)
+✅ **AI Assessment** (Powered by Deepseek + Whisper)
+- Writing: Grammar, Vocabulary, Coherence, Fluency (0-100 each)
+- Speaking: Pronunciation, Fluency, Vocabulary, Grammar, Coherence (0-100 each)
+- Audio transcription with Whisper API
+- Personalized feedback and improvement suggestions
+- Cost: ~$0.10/month for 300 submissions
 
 ✅ **Database Models**
-- `Submission`: Base model for all submissions (writing/listening)
-- `WritingSubmission`: Details for writing tasks
-- `ListeningSubmission`: Details for listening/speaking tasks
-- `AssessmentResult`: Detailed scoring and feedback
+- `Submission`: Base model with status tracking (pending/in_progress/completed/failed)
+- `WritingSubmission`: Text details and word count
+- `ListeningSubmission`: Audio details and transcription
+- `AssessmentResult`: Detailed sub-scores and feedback
 
 ✅ **API Endpoints**
-- `POST /team11/api/submit-writing/` - Submit writing text
-- `POST /team11/api/submit-listening/` - Submit audio recording
+- `POST /team11/api/submit-writing/` - Submit and assess writing
+- `POST /team11/api/submit-listening/` - Submit and assess speaking
 - `GET /team11/dashboard/` - View submission history
 - `GET /team11/submission/<uuid>/` - View detailed results
 
 ✅ **Frontend Pages**
-- Landing page with service overview
-- Exam type selection page
-- Writing exam interface with word counter
-- Listening exam interface with audio recording
-- Dashboard with submission history
-- Detailed results page with scores and feedback
+- Landing page, exam selection, writing/listening interfaces
+- Dashboard with submission history and statistics
+- Detailed results page with AI feedback
 
-✅ **Static Data (for now)**
-- 3 writing topics
-- 3 listening topics
-- Static score of 90 for all submissions
-- Pre-defined feedback and suggestions
+## AI Integration
+
+**API Configuration:**
+- Provider: GapGPT (`https://api.gapgpt.app/v1`)
+- Models: `deepseek-chat` (text), `gapgpt/whisper-1` (audio)
+- Key configured in `services/ai_service.py`
+
+**Service Layer:**
+```python
+from team11.services import assess_writing, assess_speaking
+
+# Writing assessment
+result = assess_writing(topic, text_body, word_count)
+# Returns: scores, feedback_summary, suggestions
+
+# Speaking assessment (transcription + analysis)
+result = assess_speaking(topic, audio_file_path, duration_seconds)
+# Returns: scores, transcription, feedback_summary, suggestions
+```
+
+**Test AI Service:**
+```powershell
+python team11/test_ai_service.py
+```
 
 ## Project Structure
 
 ```
 team11/
+├── services/              # AI integration layer
+│   ├── ai_service.py      # Core AI functions
+│   └── prompts.py         # Assessment prompts
 ├── models.py              # Database models
-├── views.py               # Views and API endpoints
-├── urls.py                # URL routing
-├── admin.py               # Django admin configuration
+├── views.py               # Views and API endpoints (AI-integrated)
 ├── migrations/            # Database migrations
-│   └── 0001_initial.py
 ├── templates/team11/      # HTML templates
-│   ├── index.html         # Landing page
-│   ├── start_exam.html    # Exam selection
-│   ├── writing_exam.html  # Writing interface
-│   ├── listening_exam.html # Audio recording interface
-│   ├── dashboard.html     # Submission history
-│   └── submission_detail.html # Detailed results
-└── static/team11/         # CSS and assets
-    ├── styles/
-    │   ├── common.css     # Shared styles
-    │   └── style.css      # Page-specific styles
-    └── public/
-        └── images/
+├── static/team11/         # CSS and assets
+├── figma/                 # SVG mockups for Figma
+└── test_ai_service.py     # AI testing script
 ```
 
-## How to Run the Project
+## How to Run
 
-### Option 1: Local Development (Without Docker)
+### Local Development
 
-1. **Ensure Python environment is set up:**
+1. **Activate virtual environment and install dependencies:**
    ```powershell
-   # Virtual environment should already be created
-   # If not, create it:
-   python -m venv .venv
-   
-   # Activate it (already done by VS Code Python extension)
    .venv\Scripts\Activate.ps1
-   ```
-
-2. **Install dependencies:**
-   ```powershell
    pip install -r requirements.txt
    ```
 
-3. **Verify .env file exists:**
-   ```powershell
-   # Should already exist from setup
-   # If not, copy from example:
-   Copy-Item .env.example .env
-   ```
-
-4. **Run migrations (already completed):**
+2. **Run migrations:**
    ```powershell
    python manage.py migrate
    ```
 
-5. **Create a superuser (optional, for admin access):**
-   ```powershell
-   python manage.py createsuperuser
-   ```
-
-6. **Run the development server:**
+3. **Run development server:**
    ```powershell
    python manage.py runserver
    ```
 
-7. **Access the application:**
+4. **Access:**
    - Main site: http://localhost:8000/
-   - Team 11 microservice: http://localhost:8000/team11/
-   - Django admin: http://localhost:8000/admin/
+   - Team 11: http://localhost:8000/team11/
 
-### Option 2: Docker (Production-like)
+### Docker (Production)
 
-1. **Create Docker network (if not exists):**
-   ```powershell
-   docker network create app404_net
-   ```
+```powershell
+docker network create app404_net
+docker-compose up --build
+docker-compose exec core python manage.py migrate
+```
 
-2. **Build and run with Docker Compose:**
-   ```powershell
-   # From project root
-   docker-compose up --build
-   ```
+## Testing the AI Assessment
 
-3. **Run migrations in Docker:**
-   ```powershell
-   docker-compose exec core python manage.py migrate
-   ```
-
-4. **Create superuser in Docker (optional):**
-   ```powershell
-   docker-compose exec core python manage.py createsuperuser
-   ```
-
-5. **Access the application:**
-   - Main site: http://localhost:8000/
-   - Team 11 microservice: http://localhost:8000/team11/
-
-## Testing the Microservice
-
-### 1. User Registration and Login
-
+### 1. User Registration
 1. Navigate to http://localhost:8000/
-2. Click "ثبت نام" (Sign Up) to create an account
-3. Fill in the registration form
-4. After registration, log in with your credentials
+2. Click "ثبت نام" (Sign Up) and create an account
 
-### 2. Test Writing Submission
-
+### 2. Test Writing (AI-Powered)
 1. Go to http://localhost:8000/team11/
-2. Click "شروع آزمون" (Start Exam)
-3. Select a writing topic
-4. Write at least 150 words in the text area
-5. Click "ارسال و دریافت نمره" (Submit and Get Score)
-6. You should receive a score of 90
+2. Click "شروع آزمون" → Select writing topic
+3. Write your essay (150+ words recommended)
+4. Submit and receive:
+   - Overall score (0-100)
+   - Sub-scores: Grammar, Vocabulary, Coherence, Fluency
+   - Detailed feedback and 3 personalized suggestions
 
-### 3. Test Listening/Speaking Submission
-
-1. From the exam selection page, choose a listening topic
-2. Click "شروع ضبط صدا" (Start Recording)
-3. Allow microphone access when prompted
-4. Speak for a few seconds
-5. Click "توقف ضبط" (Stop Recording)
-6. Preview the audio
-7. Click "ارسال و دریافت نمره" (Submit and Get Score)
-8. You should receive a score of 90
+### 3. Test Speaking (AI-Powered)
+1. Choose listening topic from exam selection
+2. Record audio (30-60 seconds)
+3. Submit and receive:
+   - Audio transcription (Whisper API)
+   - Overall score (0-100)
+   - Sub-scores: Pronunciation, Fluency, Vocabulary, Grammar, Coherence
+   - Detailed feedback and suggestions
 
 ### 4. View Dashboard
+- Click "داشبورد من" to see all submissions
+- View detailed results for each assessment
 
-1. Click "داشبورد من" (My Dashboard)
-2. You should see all your submissions
-3. Click "جزئیات" (Details) on any submission to view full results
+## Assessment Criteria
 
-### 5. Admin Interface (if superuser created)
+**Writing** (4 criteria × 0-100):
+- **Grammar**: Sentence structure, tenses, agreement
+- **Vocabulary**: Word choice, range, precision
+- **Coherence**: Logical organization, idea progression
+- **Fluency**: Natural flow, sentence variety
 
-1. Go to http://localhost:8000/admin/
-2. Log in with superuser credentials
-3. Navigate to Team11 models to view/manage submissions
+**Speaking** (5 criteria × 0-100):
+- **Pronunciation**: Clarity, accent, intonation
+- **Fluency**: Pace, pauses, natural delivery
+- **Vocabulary**: Word choice and range
+- **Grammar**: Sentence structure, verb usage
+- **Coherence**: Logical organization
 
-## Architecture Notes
+**Score Ranges:**
+- 90-100: Excellent (near-native)
+- 75-89: Good (strong command)
+- 60-74: Satisfactory (adequate)
+- 40-59: Limited (frequent errors)
+- 0-39: Poor (severe errors)
 
-- **Microservice Pattern**: Team 11 operates independently with its own database
-- **Authentication**: Shared authentication via core app (JWT cookies)
-- **Database Router**: Automatically routes team11 models to team11 database
-- **Styling**: Matches core project's Persian/RTL design system
-- **Static Content**: Currently uses placeholder responses (90 score) for rapid prototyping
+## Architecture
+
+- **Microservice Pattern**: Independent operation with own database
+- **Authentication**: Shared JWT cookies via core app
+- **AI Service Layer**: `services/ai_service.py` handles API calls
+- **Error Handling**: Failed assessments marked with status='failed'
+- **Logging**: All AI calls logged for debugging
 
 ## Contributors
 
-Team 11 - Software Engineering Course 1404-01
+Team 11 - Software Engineering Course 1404-01  
 Amirkabir University of Technology
